@@ -4,7 +4,7 @@
 
 This project is part of a group assignment for CityU CS5296 Cloud Computing:Theo & Prac.
 
-We provide PySpark-based image quantization with support for using different algorithms (e.g., kMeans) with different parameters (e.g., number of colors k, maximum number of iterations maxIter, etc.). This project references the previous project (https://github.com/YongzeYang/Parallel-Color-Quantization). However, we rewrote all the code and refactored all the logic (the previous project had only simple Java and Scala scripts). We provided a complete webserver implementation that supports users to access our service by initiating HTTP requests through a browser or an interface management tool (e.g. Postman).
+We provide PySpark-based image quantization with support for using different algorithms (e.g., kMeans) with different parameters (e.g., number of colors k, maximum number of iterations maxIter, etc.). This project references the previous project (https://github.com/YongzeYang/Parallel-Color-Quantization). However, we rewrote all the code and refactored all the logic (the previous project had only simple Java and Scala scripts). Previous project have only contributed inspiration. We provided a complete webserver implementation that supports users to access our service by initiating HTTP requests through a browser or an interface management tool (e.g. Postman).
 
 The project consists of both front-end and back-end components, and this repository contains the complete back-end Django code. To run it, make sure you have the Python Django environment and Spark environment installed on your device.
 
@@ -55,7 +55,7 @@ os.environ['SPARK_HOME'] = 'spark-3.5.1-bin-hadoop3'
 os.environ['HADOOP_HOME'] = 'hadoop-3.3.6'
 ```
 
-In addition, if you are running macOS, you need to add the following additional statement:
+Please note that, if you are running macOS or if you found the exception of "Apps aren't loaded yet", you need to add the following additional statement in `manage.py`:
 
 ``` python
 # If you use macOS, you have to setup this
@@ -70,3 +70,15 @@ $ python manage.py runserver 8000
 ```
 
 It will run on port 8000 by default. You can change the port number as per your requirement.
+
+## To use our API
+
+## Via API Management tools:
+
+We recommend that you use APIfox as an interface management tool to initiate HTTP requests. We have generated the interface documentation at the following link: https://apifox.com/apidoc/shared-f9e0cd22-2285-4e46-b19e-04d239563c56 . This documentation defines the interface path, request parameters, runtime examples, use cases, etc. You can refer to them to initiate HTTP requests.
+
+## Via our front-end webpages:
+
+We implemented front-end services.
+
+The GitHub repository for the front-end is located at: https://github.com/chuchu-95/ImageColorQuantizationShow
